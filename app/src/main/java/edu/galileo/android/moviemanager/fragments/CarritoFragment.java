@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -16,21 +15,21 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edu.galileo.android.moviemanager.R;
-import edu.galileo.android.moviemanager.activities.MovieDetailActivity;
-import edu.galileo.android.moviemanager.adapters.MovieRecyclerViewAdapter;
-import edu.galileo.android.moviemanager.models.Movie;
+import edu.galileo.android.moviemanager.activities.ProductoDetailActivity;
+import edu.galileo.android.moviemanager.adapters.ProductoAdapter;
+import edu.galileo.android.moviemanager.models.Producto;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NowPlayingFragment extends Fragment {
+public class CarritoFragment extends Fragment {
 
 
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
-    private List<Movie> producto;
+    private List<Producto> productos;
 
-    public NowPlayingFragment() {
+    public CarritoFragment() {
         // Required empty public constructor
     }
 
@@ -38,7 +37,7 @@ public class NowPlayingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_now_playing, container, false);
+        View view = inflater.inflate(R.layout.fragment_carrito, container, false);
         ButterKnife.bind(this, view);
 
         initializeData();
@@ -48,7 +47,7 @@ public class NowPlayingFragment extends Fragment {
         rvMovies.setHasFixedSize(true);
         rvMovies.setLayoutManager(llm);
 
-        MovieRecyclerViewAdapter adapter = new MovieRecyclerViewAdapter(getContext(), producto);
+        ProductoAdapter adapter = new ProductoAdapter(getContext(), productos);
         rvMovies.setAdapter(adapter);
 
         return view;
@@ -56,9 +55,9 @@ public class NowPlayingFragment extends Fragment {
 
     private void initializeData() {
 
-        producto = new ArrayList<>();
-       for(Movie carrito: MovieDetailActivity.getListacarrito()){
-           producto.add(carrito);
+        productos = new ArrayList<>();
+       for(Producto carrito: ProductoDetailActivity.getListacarrito()){
+           productos.add(carrito);
        }
     }
 

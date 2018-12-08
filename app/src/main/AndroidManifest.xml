@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.galileo.android.moviemanager">
+    package="edu.galileo.android.moviemanager"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,9 +9,11 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Main2Activity">
+        <activity android:name=".activities.Main2Activity"
+            android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +23,8 @@
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +32,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MovieDetailActivity"
+            android:name=".activities.ProductoDetailActivity"
+            android:configChanges="screenSize|orientation"
             android:label="@string/title_activity_movie_detail"
             android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -36,7 +41,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.galileo.android.moviemanager.activities.MainActivity" />
         </activity>
-        <activity android:name=".Registro" />
+        <activity android:name=".models.Registro"
+            android:configChanges="screenSize|orientation">
+
+        </activity>
     </application>
 
 </manifest>

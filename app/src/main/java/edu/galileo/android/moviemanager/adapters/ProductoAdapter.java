@@ -18,13 +18,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edu.galileo.android.moviemanager.R;
-import edu.galileo.android.moviemanager.activities.MovieDetailActivity;
-import edu.galileo.android.moviemanager.models.Movie;
-public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecyclerViewAdapter.ViewHolder> {
-    List<Movie> movies;
+import edu.galileo.android.moviemanager.activities.ProductoDetailActivity;
+import edu.galileo.android.moviemanager.models.Producto;
+
+public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHolder> {
+    List<Producto> productos;
     Context context;
-    public MovieRecyclerViewAdapter(Context context, List<Movie> movies){
-        this.movies = movies;
+    public ProductoAdapter(Context context, List<Producto> productos){
+        this.productos = productos;
         this.context = context;
     }
     private Context getContext(){
@@ -32,23 +33,24 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movie, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_producto, parent, false);
         return new ViewHolder(v);
     }
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Movie movie = movies.get(position);
-        holder.tvTitle.setText(movie.getTitle());
-        holder.tvOverview.setText(movie.getOverview());
-        holder.txtPrecio.setText(String.valueOf(movie.getPrecio()));
-        holder.ratingBar.setNumStars((int) movie.getRating());
+        Producto producto = productos.get(position);
+        holder.tvTitle.setText(producto.getTitle());
+        holder.tvOverview.setText(producto.getOverview());
+        holder.txtPrecio.setText(String.valueOf(producto.getPrecio()));
+        holder.ratingBar.setRating((float) producto.getRating());
+        holder.dolar.setText(producto.getDolar());
         Picasso.with(getContext())
-                .load(movie.getImagen())
+                .load(producto.getImagen())
                 .into(holder.ivMovieImage);
     }
     @Override
     public int getItemCount() {
-        return movies.size();
+        return productos.size();
     }
     public  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         @BindView(R.id.ivMovieImage)
@@ -61,6 +63,8 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         TextView txtPrecio;
         @BindView(R.id.myRatingBar)
         RatingBar ratingBar;
+        @BindView(R.id.txtdolar)
+        TextView dolar;
         @BindView(R.id.cvMovie)
         CardView cvMovie;
         ViewHolder(View view) {
@@ -70,10 +74,10 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         }
         @Override
         public void onClick(View v) {
-            Movie movie = movies.get(getAdapterPosition());
+            Producto producto = productos.get(getAdapterPosition());
 
-            Intent intent = new Intent(getContext(), MovieDetailActivity.class);
-            intent.putExtra("MOVIE", movie);
+            Intent intent = new Intent(getContext(), ProductoDetailActivity.class);
+            intent.putExtra("MOVIE", producto);
             getContext().startActivity(intent);
 
         }

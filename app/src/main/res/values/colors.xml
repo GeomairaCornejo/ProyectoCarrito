@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2e8165</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="verdeclaro">#cdf5f1</color>
+    <color name="colorPrimary">#fedbd0</color>
+    <color name="colorPrimaryDark">#bc93af</color>
+    <color name="colorAccent">#feeae6</color>
+    <color name="verdeclaro">#feeae6</color>
     <color name="plomo">#babcbb</color>
-    <color name="celeste">#ed5dddfa</color>
-
+    <color name="celeste">#deb5d8</color>
+    <color name="carrito">#442c2e</color>
+    <color name="negro">#000000</color>
+    <color name="fondocolor">#f0d3f7</color>
 </resources>

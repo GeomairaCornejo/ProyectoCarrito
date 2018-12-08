@@ -23,17 +23,33 @@
             app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
+            android:id="@+id/txtdolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvOverview"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:text="$"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
             android:id="@+id/txtPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/tvOverview"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="17dp"
             android:layout_marginRight="17dp"
-            android:text="$5.30"
-            android:textColor="@color/colorAccent"
+            android:text="5.30"
+            android:textColor="@color/negro"
 
             android:textSize="18sp"
             android:textStyle="bold"

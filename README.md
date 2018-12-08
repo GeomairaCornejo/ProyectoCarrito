@@ -1,6 +1,6 @@
 #  *Movie Manager*
 
-**Movie Manager** shows the latest movies currently playing in theaters and the upcoming movies. The app displays images and basic information about these movies to the user.
+**Movie Manager** shows the latest productos currently playing in theaters and the upcoming productos. The app displays images and basic information about these productos to the user.
 
 ## Topics
 
@@ -19,16 +19,16 @@
 
 The following **required** functionality is completed:
 
-* [x] User can **scroll through current movies and upcoming movies**
+* [x] User can **scroll through current productos and upcoming productos**
 * [x] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
-* [x] For each movie displayed, user can see the following details:
+* [x] For each producto displayed, user can see the following details:
   * [x] Title, Poster Image, Overview (Portrait mode)
 * [x] User interface improved through styling and coloring and using material design elements such as [CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html) and [Navigation Drawer](https://developer.android.com/training/implementing-navigation/nav-drawer.html)
 * [x] The app is using [Espresso](https://developer.android.com/training/testing/ui-testing/espresso-testing.html) to test the UI interactions.
 
 The following **bonus** features are implemented:
 
-* [x] Allow user to view details of the movie including ratings and popularity within a separate activity.
+* [x] Allow user to view details of the producto including ratings and popularity within a separate activity.
 * [x] The app implement the popular [Butterknife annotation library](http://guides.codepath.com/android/Reducing-View-Boilerplate-with-Butterknife) to reduce boilerplate code.
 * [x] All the values for dimensions are specified in dimens.xml
 * [x] All the string values are specified in strings.xml

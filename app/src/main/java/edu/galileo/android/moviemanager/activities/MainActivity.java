@@ -1,11 +1,8 @@
 package edu.galileo.android.moviemanager.activities;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import edu.galileo.android.moviemanager.R;
-import edu.galileo.android.moviemanager.fragments.NowPlayingFragment;
-import edu.galileo.android.moviemanager.fragments.UpcomingFragment;
+import edu.galileo.android.moviemanager.fragments.CarritoFragment;
+import edu.galileo.android.moviemanager.fragments.CocinaFragment;
 import edu.galileo.android.moviemanager.fragments.comedorFragment;
 import edu.galileo.android.moviemanager.fragments.dormitorioFragment;
 
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        showFragment(NowPlayingFragment.class);
+        showFragment(CarritoFragment.class);
     }
 
     @Override
@@ -84,11 +81,11 @@ public class MainActivity extends AppCompatActivity
         Class fragment = null;
 
         if (id == R.id.nav_carrito) {
-            fragment = NowPlayingFragment.class;
+            fragment = CarritoFragment.class;
             this.setTitle("Mis Pedidos");
             showFragment(fragment);
         } else if (id == R.id.nav_cocina) {
-            fragment = UpcomingFragment.class;
+            fragment = CocinaFragment.class;
             this.setTitle("Cocina");
             showFragment(fragment);
         } else if (id == R.id.nav_comedor) {
