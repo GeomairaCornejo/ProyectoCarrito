@@ -24,6 +24,7 @@
             app:collapsedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded.Shadow"
             app:expandedTitleMarginEnd="4dp"
             app:expandedTitleMarginStart="4dp"
+
             app:expandedTitleMarginBottom="5dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 

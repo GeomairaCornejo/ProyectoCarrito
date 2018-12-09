@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity
             fragment = dormitorioFragment.class;
             showFragment(fragment);
         } else if (id == R.id.nav_logout) {
+            fragment = Main2Activity.class;
+            showFragment(fragment);
 
         }
 

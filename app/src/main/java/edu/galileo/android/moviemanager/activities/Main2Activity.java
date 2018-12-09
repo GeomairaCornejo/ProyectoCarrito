@@ -1,6 +1,7 @@
 package edu.galileo.android.moviemanager.activities;
 
 import android.database.Cursor;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,16 +17,13 @@ import edu.galileo.android.moviemanager.models.Registro;
 public class Main2Activity extends AppCompatActivity {
     CardView registrarse;
     CardView ir;
-    EditText editext, ediText2;
-    DBHelper dbHelper;
-    private Cursor fila;
+
+    DBHelper helper = new DBHelper(this,"DB1",null,1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        dbHelper = new DBHelper(this);
-        editext = (EditText) findViewById(R.id.editext);
-        ediText2 = (EditText) findViewById(R.id.editText2);
+
         registrarse = (CardView) findViewById(R.id.view1);
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,17 +36,29 @@ public class Main2Activity extends AppCompatActivity {
         ir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String usuario = editext.getText().toString();
-                String contrasena = ediText2.getText().toString();
-                Boolean Chkusuariocontr = dbHelper.usercontrasena(usuario,contrasena);
-                Intent ir = new Intent(Main2Activity.this, MainActivity.class);
-                startActivity(ir);
-                if (Chkusuariocontr== true)
-                    Toast.makeText(getApplicationContext()," usuario o contraseña Incorrecta", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(getApplicationContext(),"Login Exitoso!!", Toast.LENGTH_SHORT).show();
+                EditText txtusu=(EditText)findViewById(R.id.ediUsuario);
+                EditText txtPass = (EditText)findViewById(R.id.ediPassword);
+                try {
+                    Cursor cursor = helper.ConsultarUsuPas(txtusu.getText().
+                            toString(),txtPass.getText().toString());
+                    if(cursor.getCount()>0){
+                        Intent ir = new Intent(Main2Activity.this, MainActivity.class);
+                        startActivity(ir);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"USUARIO Y/O PASSWORD INCORRECTA.",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    txtusu.setText("");
+                    txtPass.setText("");
+                    txtusu.findFocus();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+
+
             }
         });
+
     }
 
 }
