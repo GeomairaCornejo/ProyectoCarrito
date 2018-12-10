@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import edu.galileo.android.moviemanager.R;
 import edu.galileo.android.moviemanager.entidades.DBHelper;
-import edu.galileo.android.moviemanager.models.Registro;
 
 public class Main2Activity extends AppCompatActivity {
     CardView registrarse;

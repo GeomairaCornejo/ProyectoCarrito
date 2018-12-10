@@ -10,147 +10,157 @@
     android:paddingTop="16dp"
     android:background="@color/verdeclaro"
     tools:context=".activities.Main2Activity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="201dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/loguito" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        app:srcCompat="@drawable/logo" />
+            <EditText
+                android:id="@+id/ediUsuario"
+                android:layout_width="260dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/imageView"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_marginStart="-37dp"
+                android:layout_marginLeft="-37dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="-58dp"
+                android:layout_marginRight="-58dp"
+                android:background="#11000000"
+                android:drawableLeft="@drawable/ic_person"
+                android:ems="10"
+                android:hint="correo"
+                android:inputType="textPersonName"
+                android:typeface="serif" />
 
-    <EditText
-        android:id="@+id/ediUsuario"
-        android:layout_width="260dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_marginStart="-37dp"
-        android:layout_marginLeft="-37dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="-58dp"
-        android:layout_marginRight="-58dp"
-        android:background="#11000000"
-        android:drawableLeft="@drawable/ic_person"
-        android:ems="10"
-        android:hint="correo"
-        android:inputType="textPersonName"
-        android:typeface="serif" />
+            <EditText
+                android:id="@+id/ediPassword"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/ediUsuario"
+                android:layout_alignStart="@+id/ediUsuario"
+                android:layout_alignLeft="@+id/ediUsuario"
+                android:layout_alignEnd="@+id/ediUsuario"
+                android:layout_alignRight="@+id/ediUsuario"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="-1dp"
+                android:layout_marginRight="-1dp"
+                android:background="#11000000"
+                android:drawableLeft="@drawable/ic_llave"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:typeface="serif" />
 
-    <EditText
-        android:id="@+id/ediPassword"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/ediUsuario"
-        android:layout_alignStart="@+id/ediUsuario"
-        android:layout_alignLeft="@+id/ediUsuario"
-        android:layout_alignEnd="@+id/ediUsuario"
-        android:layout_alignRight="@+id/ediUsuario"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
-        android:background="#11000000"
-        android:drawableLeft="@drawable/ic_llave"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:typeface="serif" />
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/view"
-        android:layout_width="286dp"
-        android:layout_height="52dp"
-        android:layout_above="@+id/ediPassword"
-        android:layout_below="@+id/ediPassword"
-        android:layout_alignStart="@+id/ediPassword"
-        android:layout_alignLeft="@+id/ediPassword"
-        android:layout_alignEnd="@+id/ediPassword"
-        android:layout_alignRight="@+id/ediPassword"
-        android:layout_marginStart="-4dp"
-        android:layout_marginLeft="-4dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="-6dp"
-        android:layout_marginRight="-6dp"
-        android:layout_marginBottom="-110dp"
-        android:foregroundGravity="center"
-        app:cardBackgroundColor="@color/plomo"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp">
-
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="172dp"
-            android:layout_height="37dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="65dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:layout_marginBottom="3dp"
-            android:gravity="center"
-            android:text="INICIAR SESION"
-            android:textColor="@color/negro"
-            android:textSize="18sp"
-            android:typeface="serif" />
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/view1"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_above="@+id/ediPassword"
-        android:layout_alignStart="@+id/view"
-        android:layout_alignLeft="@+id/view"
-        android:layout_alignTop="@+id/ediPassword"
-        android:layout_alignEnd="@+id/view"
-        android:layout_alignRight="@+id/view"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="-177dp"
-        android:foregroundGravity="center"
-        app:cardBackgroundColor="@color/plomo"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp">
+            <android.support.v7.widget.CardView
+                android:id="@+id/view"
+                android:layout_width="286dp"
+                android:layout_height="52dp"
+                android:layout_above="@+id/ediPassword"
+                android:layout_below="@+id/ediPassword"
+                android:layout_alignStart="@+id/ediPassword"
+                android:layout_alignLeft="@+id/ediPassword"
+                android:layout_alignEnd="@+id/ediPassword"
+                android:layout_alignRight="@+id/ediPassword"
+                android:layout_marginStart="-4dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="-6dp"
+                android:layout_marginRight="-6dp"
+                android:layout_marginBottom="-110dp"
+                android:foregroundGravity="center"
+                app:cardBackgroundColor="@color/plomo"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
 
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="31dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="65dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:layout_marginBottom="3dp"
-            android:gravity="center"
-            android:text="REGISTRARSE"
-            android:textColor="@color/negro"
-            android:textSize="18sp"
-            android:typeface="serif" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="172dp"
+                    android:layout_height="37dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:text="INICIAR SESION"
+                    android:textColor="@color/negro"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
 
-    </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_above="@+id/ediPassword"
+                android:layout_alignStart="@+id/view"
+                android:layout_alignLeft="@+id/view"
+                android:layout_alignTop="@+id/ediPassword"
+                android:layout_alignEnd="@+id/view"
+                android:layout_alignRight="@+id/view"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="-177dp"
+                android:foregroundGravity="center"
+                app:cardBackgroundColor="@color/plomo"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:text="REGISTRARSE"
+                    android:textColor="@color/negro"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 
 </RelativeLayout>

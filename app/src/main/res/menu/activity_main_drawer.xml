@@ -19,6 +19,10 @@
             android:id="@+id/nav_comedor"
             android:icon="@drawable/ic_comedor"
             android:title="@string/nav_comedor" />
+        <item
+            android:id="@+id/nav_factura"
+            android:icon="@drawable/ic_fact"
+            android:title="@string/nav_factura" />
 
     </group>
 

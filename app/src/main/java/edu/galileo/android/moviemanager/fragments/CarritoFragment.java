@@ -25,6 +25,8 @@ import edu.galileo.android.moviemanager.models.Producto;
 public class CarritoFragment extends Fragment {
 
 
+
+
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
     private List<Producto> productos;

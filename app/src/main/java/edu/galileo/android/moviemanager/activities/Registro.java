@@ -1,4 +1,4 @@
-package edu.galileo.android.moviemanager.models;
+package edu.galileo.android.moviemanager.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

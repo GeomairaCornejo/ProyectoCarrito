@@ -41,7 +41,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.galileo.android.moviemanager.activities.MainActivity" />
         </activity>
-        <activity android:name=".models.Registro"
+        <activity android:name=".activities.Registro"
             android:configChanges="screenSize|orientation">
 
         </activity>

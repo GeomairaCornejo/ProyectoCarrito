@@ -11,12 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import edu.galileo.android.moviemanager.R;
 import edu.galileo.android.moviemanager.fragments.CarritoFragment;
 import edu.galileo.android.moviemanager.fragments.CocinaFragment;
 import edu.galileo.android.moviemanager.fragments.comedorFragment;
 import edu.galileo.android.moviemanager.fragments.dormitorioFragment;
+import edu.galileo.android.moviemanager.fragments.factura;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -96,12 +98,18 @@ public class MainActivity extends AppCompatActivity
             this.setTitle("Dormitorio");
             fragment = dormitorioFragment.class;
             showFragment(fragment);
+        }else if (id == R.id.nav_factura) {
+            if(!ProductoDetailActivity.getListacarrito().isEmpty()){
+                fragment = factura.class;
+                this.setTitle("Mi Factura");
+                showFragment(fragment);
+            }else{
+                Toast.makeText(this, "No se han agregado articulos..!", Toast.LENGTH_SHORT).show();
+            }
         } else if (id == R.id.nav_logout) {
             fragment = Main2Activity.class;
             showFragment(fragment);
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
